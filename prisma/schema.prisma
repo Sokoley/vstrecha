@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Guest {
+  id        String    @id @default(cuid())
+  badgeCode String    @unique @db.VarChar(64)
+  fullName  String    @db.VarChar(255)
+  company   String?   @db.VarChar(255)
+  phone     String?   @db.VarChar(64)
+  note      String?   @db.Text
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  checkIns  CheckIn[]
+}
+
+model Stage {
+  id        String    @id @default(cuid())
+  name      String    @db.VarChar(255)
+  sortOrder Int       @default(0)
+  isActive  Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  checkIns  CheckIn[]
+}
+
+model CheckIn {
+  id         String   @id @default(cuid())
+  guestId    String
+  stageId    String
+  scannedAt  DateTime @default(now())
+  scannedBy  String   @db.VarChar(128)
+  guest      Guest    @relation(fields: [guestId], references: [id], onDelete: Cascade)
+  stage      Stage    @relation(fields: [stageId], references: [id], onDelete: Cascade)
+
+  @@unique([guestId, stageId])
+  @@index([stageId])
+  @@index([guestId])
+}

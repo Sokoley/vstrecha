@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f5f1;
+  --ink: #1c1a16;
+  --brand: #2f6e60;
+  --accent: #c45c26;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(47, 110, 96, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(196, 92, 38, 0.08), transparent 50%),
+    linear-gradient(180deg, #f8f6f0 0%, #ebe6da 100%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand-700 text-white hover:bg-brand-800;
+  }
+  .btn-secondary {
+    @apply btn border border-ink-200 bg-white/80 text-ink-900 hover:bg-white;
+  }
+  .btn-danger {
+    @apply btn bg-red-700 text-white hover:bg-red-800;
+  }
+  .input {
+    @apply w-full rounded-lg border border-ink-200 bg-white/90 px-3 py-2.5 text-sm text-ink-900 shadow-sm outline-none transition placeholder:text-ink-200/80 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-ink-900/80;
+  }
+  .card {
+    @apply rounded-2xl border border-ink-200/70 bg-white/75 p-5 shadow-sm backdrop-blur;
+  }
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight text-ink-950 sm:text-3xl;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+  header,
+  .print\:hidden,
+  button {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .badge-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+  .badge-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}
