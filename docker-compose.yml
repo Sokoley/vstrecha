@@ -1,5 +1,6 @@
 # Продакшен для ispmanager: приложение в Docker, MariaDB на хосте.
-# network_mode: host — чтобы 127.0.0.1 в DATABASE_URL указывал на MariaDB хоста.
+# Порт 3001 — чтобы не конфликтовать с brand.smazka.ru (у него :3000).
+# network_mode: host — 127.0.0.1 в DATABASE_URL = MariaDB на хосте.
 
 services:
   app:
@@ -11,6 +12,6 @@ services:
       - .env
     environment:
       NODE_ENV: production
-      PORT: "3000"
+      PORT: "3001"
       HOSTNAME: "0.0.0.0"
       NEXT_PUBLIC_APP_URL: "https://vstrecha.smazka.ru"
