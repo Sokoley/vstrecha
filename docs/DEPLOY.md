@@ -32,26 +32,51 @@ NEXT_PUBLIC_APP_URL="https://vstrecha.smazka.ru"
 
 ## 4. Запуск через Docker / ispmanager
 
-### Вариант A — из терминала
+### Перед запуском — проверить MariaDB на хосте
+
+```bash
+ss -tlnp | grep 3306
+# должно быть что-то вроде 127.0.0.1:3306
+
+mysql -h127.0.0.1 -P3306 -udb_wp_user -p -e "SELECT 1"
+# или: mysqladmin -h127.0.0.1 ping
+```
+
+Если порт 3306 не слушается — в ispmanager запустите службу MariaDB.
+
+### Вариант A — из терминала (`network_mode: host`)
 
 ```bash
 cd /var/www/www-root/data/www/vstrecha.smazka.ru
+docker compose down
 docker compose up -d --build
-docker compose logs -f app
+docker inspect vstrecha-app --format '{{.HostConfig.NetworkMode}}'
+# ожидается: host
+docker compose logs -f
 ```
 
-Приложение слушает **порт 3000** на сервере.
+Приложение слушает **порт 3000** на сервере. В `.env` оставляйте `127.0.0.1`.
 
-### Вариант B — контейнер в панели ispmanager
+### Если NetworkMode не `host`
 
-1. В ispmanager откройте Docker / контейнеры.
-2. Соберите образ из каталога сайта (Dockerfile в корне репозитория) **или** выполните на сервере `docker compose build`.
-3. Запуск контейнера:
-   - образ: собранный `vstrecha-app` / имя из compose
-   - **network mode: host** (важно для доступа к MariaDB на 127.0.0.1)
-   - env из `.env` (или те же переменные вручную)
-   - restart: unless-stopped
-4. В настройках сайта `vstrecha.smazka.ru` сделайте **прокси** (reverse proxy) на `http://127.0.0.1:3000`, а не раздачу статичного `index.html`.
+Тогда `127.0.0.1` внутри контейнера — это сам контейнер, не MariaDB. В `.env` замените хост на шлюз Docker:
+
+```env
+DATABASE_URL="mysql://db_wp_user:ПАРОЛЬ@172.17.0.1:3306/vstrecha"
+```
+
+И в `docker-compose.yml` временно уберите `network_mode: host`, добавьте:
+
+```yaml
+ports:
+  - "3000:3000"
+extra_hosts:
+  - "host.docker.internal:host-gateway"
+```
+
+(или используйте `172.17.0.1` как выше).
+
+MariaDB должна принимать TCP с Docker-сети (часто уже слушает 127.0.0.1 — тогда нужен именно `network_mode: host`).
 
 ## 5. Проверка
 
