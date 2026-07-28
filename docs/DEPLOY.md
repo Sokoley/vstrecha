@@ -55,9 +55,9 @@ docker inspect vstrecha-app --format '{{.HostConfig.NetworkMode}}'
 docker compose logs -f
 ```
 
-Приложение слушает **порт 3001** на сервере (у `brand.smazka.ru` уже занят `:3000`). В `.env` оставляйте `127.0.0.1` для БД.
+Приложение слушает **порт 3002** (`brand` = :3000, `stat` = :3001). В `.env` для БД — `127.0.0.1`.
 
-В Apache для vstrecha проксируйте на `http://127.0.0.1:3001/` (как у brand, но порт 3001).
+В Apache для vstrecha проксируйте на `http://127.0.0.1:3002/` (по образцу brand/stat).
 
 ### Если NetworkMode не `host`
 

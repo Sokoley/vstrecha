@@ -1,5 +1,8 @@
 # Продакшен для ispmanager: приложение в Docker, MariaDB на хосте.
-# Порт 3001 — чтобы не конфликтовать с brand.smazka.ru (у него :3000).
+# Порты на этом сервере:
+#   brand.smazka.ru → :3000
+#   stat.smazka.ru  → :3001
+#   vstrecha       → :3002
 # network_mode: host — 127.0.0.1 в DATABASE_URL = MariaDB на хосте.
 
 services:
@@ -12,6 +15,6 @@ services:
       - .env
     environment:
       NODE_ENV: production
-      PORT: "3001"
+      PORT: "3002"
       HOSTNAME: "0.0.0.0"
       NEXT_PUBLIC_APP_URL: "https://vstrecha.smazka.ru"
