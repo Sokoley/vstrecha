@@ -1,17 +1,16 @@
-services:
-  mariadb:
-    image: mariadb:10.3
-    restart: unless-stopped
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: vstrecha
-      MYSQL_USER: db_wp_user
-      MYSQL_PASSWORD: localpass
-    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
-    volumes:
-      - vstrecha_mysql:/var/lib/mysql
+# Продакшен для ispmanager: приложение в Docker, MariaDB на хосте.
+# network_mode: host — чтобы 127.0.0.1 в DATABASE_URL указывал на MariaDB хоста.
 
-volumes:
-  vstrecha_mysql:
+services:
+  app:
+    build: .
+    container_name: vstrecha-app
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
+      NEXT_PUBLIC_APP_URL: "https://vstrecha.smazka.ru"

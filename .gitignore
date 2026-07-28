@@ -27,6 +27,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# local Node.js binary (installed only in site directory)
+.node/
+
 # vercel
 .vercel
 

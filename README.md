@@ -27,22 +27,18 @@ npm run dev
 
 Демо-коды: `G-DEMO0001` … `G-DEMO0010`.
 
-## Продакшен (ispmanager + телефоны)
+## Продакшен (Docker + ispmanager)
 
 Подробно: [docs/DEPLOY.md](docs/DEPLOY.md)
 
-Кратко:
-
-1. БД `vstrecha` + пользователь `db_wp_user` (привязана к сайту).
-2. На том же сервере запустить Next.js для **https://vstrecha.smazka.ru** с  
-   `DATABASE_URL=mysql://db_wp_user:ПАРОЛЬ@127.0.0.1:3306/vstrecha`
-3. Собрать APK (Android Studio) / IPA (Xcode) через Capacitor — приложение открывает `https://vstrecha.smazka.ru`.
-
 ```bash
-npx cap sync
-npm run cap:android   # Android Studio → APK
-npm run cap:ios       # Xcode → установка на iPhone
+# на сервере в каталоге сайта
+git pull
+# .env с паролем MariaDB
+docker compose up -d --build
 ```
+
+Сайт проксируется на порт **3000**. MariaDB остаётся на хосте (база `vstrecha`).
 
 ## Структура
 
