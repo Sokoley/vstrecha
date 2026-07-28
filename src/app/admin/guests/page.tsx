@@ -2,6 +2,10 @@ import Link from "next/link";
 import { GuestsAdmin } from "@/components/GuestsAdmin";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
+
+
 type SearchParams = {
   stageId?: string;
   status?: string;

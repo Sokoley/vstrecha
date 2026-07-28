@@ -3,6 +3,10 @@ import Papa from "papaparse";
 import { prisma } from "@/lib/db";
 import { generateBadgeCode } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
+
+
 function pick(row: Record<string, string>, keys: string[]) {
   for (const key of keys) {
     const found = Object.keys(row).find((k) => k.trim().toLowerCase() === key.toLowerCase());

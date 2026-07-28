@@ -2,6 +2,10 @@ import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { formatDateTime } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
+
+
 export default async function AdminHomePage() {
   const [guestCount, stages, recent] = await Promise.all([
     prisma.guest.count(),

@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
+
+
 const guestSchema = z.object({
   fullName: z.string().min(1).optional(),
   company: z.string().optional().nullable(),

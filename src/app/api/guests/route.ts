@@ -3,6 +3,10 @@ import { prisma } from "@/lib/db";
 import { generateBadgeCode } from "@/lib/auth";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
+
+
 const guestSchema = z.object({
   fullName: z.string().min(1),
   company: z.string().optional().nullable(),

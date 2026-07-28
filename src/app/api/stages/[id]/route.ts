@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
+
+
 const stageSchema = z.object({
   name: z.string().min(1).optional(),
   sortOrder: z.number().int().optional(),

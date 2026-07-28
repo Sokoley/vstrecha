@@ -2,6 +2,10 @@ import { prisma } from "@/lib/db";
 import { generateQrDataUrl } from "@/lib/qr";
 import { BadgePrintClient } from "@/components/BadgePrintClient";
 
+export const dynamic = "force-dynamic";
+
+
+
 export default async function BadgesPage() {
   const guests = await prisma.guest.findMany({ orderBy: { fullName: "asc" } });
   const badges = await Promise.all(

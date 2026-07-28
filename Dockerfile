@@ -15,6 +15,8 @@ FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+# Нужна только для сборки (страницы dynamic, к БД на build не ходят)
+ENV DATABASE_URL="mysql://build:build@127.0.0.1:3306/build"
 RUN npx prisma generate && npm run build
 
 FROM base AS runner
