@@ -53,7 +53,7 @@ export function ScannerApp() {
       setData(json);
       setCameraOn(false);
       const firstOpen = json.stages.find((s: StageStatus) => !s.passed);
-      setSelectedStageId(firstOpen?.id || json.stages[0]?.id || "");
+      setSelectedStageId(firstOpen?.id || "");
     } catch {
       setError("Ошибка сети");
     } finally {
@@ -184,16 +184,23 @@ export function ScannerApp() {
             {data.stages.map((stage) => (
               <label
                 key={stage.id}
-                className={`flex cursor-pointer items-start gap-3 rounded-xl border px-3 py-3 ${
-                  selectedStageId === stage.id ? "border-brand-500 bg-brand-50/60" : "border-ink-200 bg-white/70"
+                className={`flex items-start gap-3 rounded-xl border px-3 py-3 ${
+                  stage.passed
+                    ? "cursor-not-allowed border-ink-200/60 bg-ink-50/50 opacity-70"
+                    : selectedStageId === stage.id
+                      ? "cursor-pointer border-brand-500 bg-brand-50/60"
+                      : "cursor-pointer border-ink-200 bg-white/70"
                 }`}
               >
                 <input
                   type="radio"
                   name="stage"
                   className="mt-1"
+                  disabled={stage.passed}
                   checked={selectedStageId === stage.id}
-                  onChange={() => setSelectedStageId(stage.id)}
+                  onChange={() => {
+                    if (!stage.passed) setSelectedStageId(stage.id);
+                  }}
                 />
                 <span className="flex-1">
                   <span className="block font-medium">{stage.name}</span>
@@ -210,7 +217,12 @@ export function ScannerApp() {
             ) : null}
           </div>
 
-          <button type="button" className="btn-primary w-full !py-3 text-base" disabled={busy || !selectedStageId} onClick={register}>
+          <button
+            type="button"
+            className="btn-primary w-full !py-3 text-base"
+            disabled={busy || !selectedStageId || Boolean(data.stages.find((s) => s.id === selectedStageId)?.passed)}
+            onClick={register}
+          >
             Регистрация
           </button>
           <button
