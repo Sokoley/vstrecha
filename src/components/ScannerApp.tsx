@@ -51,6 +51,7 @@ export function ScannerApp() {
         return;
       }
       setData(json);
+      setCameraOn(false);
       const firstOpen = json.stages.find((s: StageStatus) => !s.passed);
       setSelectedStageId(firstOpen?.id || json.stages[0]?.id || "");
     } catch {
@@ -220,6 +221,7 @@ export function ScannerApp() {
               setSuccess("");
               setError("");
               setManualCode("");
+              setCameraOn(true);
             }}
           >
             Сканировать следующего
