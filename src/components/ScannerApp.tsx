@@ -121,7 +121,7 @@ export function ScannerApp() {
       if (json.alreadyChecked) {
         setSuccess(`Уже отмечен ранее (${formatDateTime(json.checkIn.scannedAt)})`);
       } else {
-        setSuccess("Регистрация прошла успешно");
+        setSuccess(json.message || "Регистрация прошла успешно");
       }
       await loadGuest(data.guest.badgeCode);
     } catch {

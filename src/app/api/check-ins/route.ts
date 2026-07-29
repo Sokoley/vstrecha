@@ -5,8 +5,6 @@ import { z } from "zod";
 
 export const dynamic = "force-dynamic";
 
-
-
 const schema = z.object({
   badgeCode: z.string().min(1).optional(),
   guestId: z.string().min(1).optional(),
@@ -39,34 +37,72 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Этап недоступен" }, { status: 400 });
   }
 
-  const existing = await prisma.checkIn.findUnique({
+  const existingSelected = await prisma.checkIn.findUnique({
     where: {
       guestId_stageId: { guestId, stageId: parsed.data.stageId },
     },
   });
 
-  if (existing) {
+  if (existingSelected) {
     return NextResponse.json({
       ok: true,
       alreadyChecked: true,
-      checkIn: existing,
+      checkIn: existingSelected,
       message: "Уже отмечен на этом этапе",
     });
   }
 
+  // Все активные этапы до выбранного включительно (по порядку)
+  const stagesToPass = await prisma.stage.findMany({
+    where: {
+      isActive: true,
+      sortOrder: { lte: stage.sortOrder },
+    },
+    orderBy: { sortOrder: "asc" },
+  });
+
+  const existing = await prisma.checkIn.findMany({
+    where: {
+      guestId,
+      stageId: { in: stagesToPass.map((s) => s.id) },
+    },
+  });
+  const existingIds = new Set(existing.map((c) => c.stageId));
+  const missing = stagesToPass.filter((s) => !existingIds.has(s.id));
+  const scannedBy = parsed.data.scannedBy?.trim() || "сканер";
+
   try {
-    const checkIn = await prisma.checkIn.create({
-      data: {
-        guestId,
-        stageId: parsed.data.stageId,
-        scannedBy: parsed.data.scannedBy?.trim() || "сканер",
-      },
+    if (missing.length) {
+      await prisma.checkIn.createMany({
+        data: missing.map((s) => ({
+          guestId,
+          stageId: s.id,
+          scannedBy,
+        })),
+        skipDuplicates: true,
+      });
+    }
+
+    const checkIn = await prisma.checkIn.findUnique({
+      where: { guestId_stageId: { guestId, stageId: parsed.data.stageId } },
       include: { guest: true, stage: true },
     });
 
-    return NextResponse.json({ ok: true, alreadyChecked: false, checkIn }, { status: 201 });
+    const autoFilled = missing.filter((s) => s.id !== parsed.data.stageId).map((s) => s.name);
+
+    return NextResponse.json(
+      {
+        ok: true,
+        alreadyChecked: false,
+        checkIn,
+        autoFilledStages: autoFilled,
+        message: autoFilled.length
+          ? `Зарегистрирован. Также отмечены: ${autoFilled.join(", ")}`
+          : "Зарегистрирован",
+      },
+      { status: 201 }
+    );
   } catch (error) {
-    // Два организатора отметили одного гостя одновременно
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
       const checkIn = await prisma.checkIn.findUnique({
         where: { guestId_stageId: { guestId, stageId: parsed.data.stageId } },
