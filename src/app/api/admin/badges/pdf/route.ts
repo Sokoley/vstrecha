@@ -38,10 +38,11 @@ const CODE_SIZE = 6;
 const COMPANY_SIZE = 11;
 const COMPANY_SIZE_SMALL = 10;
 
-const FONT_BEBAS = path.join(process.cwd(), "assets/fonts/BebasNeueCyrillic-Regular.ttf");
+const FONT_BEBAS = path.join(process.cwd(), "assets/fonts/BebasNeue-Bold.otf");
 const FONT_MONTSERRAT_BOLD = path.join(process.cwd(), "assets/fonts/Montserrat-Bold.ttf");
 const FONT_MONTSERRAT_MEDIUM = path.join(process.cwd(), "assets/fonts/Montserrat-Medium.ttf");
 const LOGO_PATH = path.join(process.cwd(), "assets/badge-header.jpg");
+const CODE_COLOR = "#a9a9a9";
 
 function titleWord(word: string) {
   if (!word) return "";
@@ -125,7 +126,7 @@ async function drawBadgeFace(
   doc.image(qrPng, qrLeft, QR_TOP, { width: QR_SIZE, height: QR_SIZE });
 
   // Код выровнен по правому краю QR (как в макете)
-  doc.font("Montserrat-Medium").fontSize(CODE_SIZE).fillColor("#000000");
+  doc.font("Montserrat-Medium").fontSize(CODE_SIZE).fillColor(CODE_COLOR);
   const codeWidth = doc.widthOfString(badge.badgeCode);
   doc.text(badge.badgeCode, qrLeft + QR_SIZE - codeWidth, CODE_TOP, {
     lineBreak: false,

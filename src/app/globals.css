@@ -51,9 +51,9 @@ body {
 }
 
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  src: url("/fonts/BebasNeueCyrillic-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Bebas Neue";
+  src: url("/fonts/BebasNeue-Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -182,9 +182,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  font-family: "Bebas Neue Cyrillic", Impact, sans-serif;
+  font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 27pt;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 0.95;
   color: #000;
 }
@@ -213,7 +213,7 @@ body {
   font-size: 6pt;
   font-weight: 500;
   line-height: 1;
-  color: #000;
+  color: #a9a9a9;
   text-align: right;
 }
 
