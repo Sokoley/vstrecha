@@ -72,8 +72,6 @@ export default async function BadgesPage() {
     })
   );
   const sheets = chunk(badges, 4);
-  const cropXs = [0, 60, 120, 180, 240];
-  const cropYs = [0, 90, 180];
 
   return (
     <div className="space-y-6">
@@ -91,17 +89,6 @@ export default async function BadgesPage() {
       <div className="badge-sheets space-y-6">
         {sheets.map((sheet, sheetIndex) => (
           <section key={sheetIndex} className="badge-sheet">
-            <div className="badge-sheet__marks" aria-hidden>
-              {cropYs.flatMap((y) =>
-                cropXs.map((x) => (
-                  <span
-                    key={`${x}-${y}`}
-                    className="badge-sheet__mark"
-                    style={{ left: `${x}mm`, top: `${y}mm` }}
-                  />
-                ))
-              )}
-            </div>
             <div className="badge-sheet__half">
               {sheet.map((badge) => (
                 <BadgeFace key={`top-${badge.id}`} badge={badge} />
