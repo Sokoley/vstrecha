@@ -68,43 +68,50 @@ function buildPdf(badges: Badge[]): Promise<Buffer> {
         });
 
         const qrX = x + (cellWidth - qrSize) / 2;
-        const qrY = y + 14;
+        const qrY = y + 10;
         doc.image(qrPng, qrX, qrY, { width: qrSize, height: qrSize });
 
-        const textTop = qrY + qrSize + 10;
-        doc
-          .fillColor("#1c1a16")
-          .fontSize(10)
-          .font("Noto-Bold")
-          .text(badge.fullName, x + 8, textTop, {
-            width: cellWidth - 16,
-            align: "center",
-            lineBreak: true,
-            height: 28,
-          });
+        const textWidth = cellWidth - 16;
+        const textX = x + 8;
+        const codeY = y + cellHeight - 16;
+        const companyY = badge.company ? codeY - 14 : codeY;
+        const nameTop = qrY + qrSize + 8;
+        const nameMaxHeight = Math.max(12, companyY - nameTop - 4);
 
-        let nextY = textTop + 28;
+        doc.font("Noto-Bold").fontSize(10).fillColor("#1c1a16");
+        const nameHeight = Math.min(
+          nameMaxHeight,
+          doc.heightOfString(badge.fullName, { width: textWidth, align: "center" })
+        );
+        doc.text(badge.fullName, textX, nameTop, {
+          width: textWidth,
+          align: "center",
+          height: nameHeight,
+          ellipsis: true,
+          lineBreak: true,
+        });
+
         if (badge.company) {
           doc
-            .fillColor("#666055")
-            .fontSize(8)
             .font("Noto")
-            .text(badge.company, x + 8, nextY, {
-              width: cellWidth - 16,
+            .fontSize(8)
+            .fillColor("#666055")
+            .text(badge.company, textX, companyY, {
+              width: textWidth,
               align: "center",
               lineBreak: false,
-              height: 12,
+              ellipsis: true,
             });
-          nextY += 14;
         }
 
         doc
-          .fillColor("#999288")
-          .fontSize(7)
           .font("Noto")
-          .text(badge.badgeCode, x + 8, Math.min(nextY, y + cellHeight - 16), {
-            width: cellWidth - 16,
+          .fontSize(7)
+          .fillColor("#999288")
+          .text(badge.badgeCode, textX, codeY, {
+            width: textWidth,
             align: "center",
+            lineBreak: false,
           });
       }
 
