@@ -38,7 +38,7 @@ export default async function GuestsPage({
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="page-title">Гости</h1>
-          <p className="mt-1 text-sm text-ink-900/65">Поиск и фильтры по списку гостей</p>
+          <p className="mt-1 text-sm text-ink-900/65">Поиск, фильтры и редактирование гостей и этапов</p>
         </div>
         <Link href="/admin/badges" className="btn-primary">
           Печать QR
