@@ -38,7 +38,9 @@ const CODE_SIZE = 6;
 const COMPANY_SIZE = 11;
 const COMPANY_SIZE_SMALL = 10;
 
-const FONT_BEBAS = path.join(process.cwd(), "assets/fonts/BebasNeueCyrillic-Regular.ttf");
+const CODE_COLOR = "#a9a9a9";
+
+const FONT_BEBAS = path.join(process.cwd(), "assets/fonts/BebasNeue-Regular.otf");
 const FONT_MONTSERRAT_BOLD = path.join(process.cwd(), "assets/fonts/Montserrat-Bold.ttf");
 const FONT_MONTSERRAT_MEDIUM = path.join(process.cwd(), "assets/fonts/Montserrat-Medium.ttf");
 const LOGO_PATH = path.join(process.cwd(), "assets/badge-header.jpg");
@@ -59,12 +61,14 @@ function splitName(fullName: string): { line1: string; line2: string } {
 }
 
 function drawCropMarks(doc: PDFKit.PDFDocument, originX: number, originY: number) {
+  // Как в макете: крестики на углах сетки резки, длина плеча ~8.9 pt
   const arm = 8.9 / 2;
   const xs = Array.from({ length: PER_PAGE + 1 }, (_, i) => originX + i * BADGE_W);
+  // Верх и низ блока + линия сгиба посередине
   const ys = [originY, originY + BADGE_H, originY + BADGE_H * 2];
 
   doc.save();
-  doc.strokeColor("#000000").lineWidth(0.5);
+  doc.strokeColor("#000000").lineWidth(0.6);
   for (const x of xs) {
     for (const y of ys) {
       doc
@@ -125,7 +129,7 @@ async function drawBadgeFace(
   doc.image(qrPng, qrLeft, QR_TOP, { width: QR_SIZE, height: QR_SIZE });
 
   // Код выровнен по правому краю QR (как в макете)
-  doc.font("Montserrat-Medium").fontSize(CODE_SIZE).fillColor("#000000");
+  doc.font("Montserrat-Medium").fontSize(CODE_SIZE).fillColor(CODE_COLOR);
   const codeWidth = doc.widthOfString(badge.badgeCode);
   doc.text(badge.badgeCode, qrLeft + QR_SIZE - codeWidth, CODE_TOP, {
     lineBreak: false,
@@ -199,8 +203,6 @@ function buildPdf(badges: Badge[]): Promise<Buffer> {
       for (let pageStart = 0; pageStart < badges.length; pageStart += PER_PAGE) {
         if (pageStart > 0) doc.addPage({ size: "A4", layout: "landscape", margin: 0 });
 
-        drawCropMarks(doc, originX, originY);
-
         const pageBadges = badges.slice(pageStart, pageStart + PER_PAGE);
         for (let i = 0; i < pageBadges.length; i++) {
           const badge = pageBadges[i];
@@ -208,6 +210,9 @@ function buildPdf(badges: Badge[]): Promise<Buffer> {
           await drawBadgeFace(doc, badge, bx, originY, false);
           await drawBadgeFace(doc, badge, bx, originY + BADGE_H, true);
         }
+
+        // Крестики поверх контента, чтобы были видны при резке
+        drawCropMarks(doc, originX, originY);
       }
 
       doc.end();
