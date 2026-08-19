@@ -1,0 +1,1696 @@
+[
+  {
+    "fullName": "Сазонов Александр",
+    "company": "АМТЕЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000001"
+  },
+  {
+    "fullName": "Сыров Алексей",
+    "company": "АМТЕЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000002"
+  },
+  {
+    "fullName": "Поляков Святослав",
+    "company": "КАРВИЛЬ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000003"
+  },
+  {
+    "fullName": "Мартынов Михаил",
+    "company": "КОРЕАНА",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000004"
+  },
+  {
+    "fullName": "Жогин Андрей",
+    "company": "КОРЕАНА",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000005"
+  },
+  {
+    "fullName": "Банникова Ирина",
+    "company": "КРОКУС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000006"
+  },
+  {
+    "fullName": "Александрова Юлия",
+    "company": "КРОКУС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000007"
+  },
+  {
+    "fullName": "Сазонов Андрей",
+    "company": "КССС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000008"
+  },
+  {
+    "fullName": "Бондаренко Андрей",
+    "company": "КССС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000009"
+  },
+  {
+    "fullName": "Смирнов Яков",
+    "company": "КССС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000010"
+  },
+  {
+    "fullName": "Подулыбин Никита",
+    "company": "ЛАДА-ИМИДЖ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000011"
+  },
+  {
+    "fullName": "Мавлянов Улугбек",
+    "company": "ФЛАГМАН",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000012"
+  },
+  {
+    "fullName": "Габдулина Анастасия",
+    "company": "SPOT",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000013"
+  },
+  {
+    "fullName": "Габдулин Альберт",
+    "company": "SPOT",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000014"
+  },
+  {
+    "fullName": "Лопаев Алексей",
+    "company": "Авто-Траст",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000015"
+  },
+  {
+    "fullName": "Насонов Сергей",
+    "company": "Автодом",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000016"
+  },
+  {
+    "fullName": "Белов Андрей",
+    "company": "Автожидкости ТД",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000017"
+  },
+  {
+    "fullName": "Белова Елена",
+    "company": "Автожидкости ТД",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000018"
+  },
+  {
+    "fullName": "Ковальчук Александр",
+    "company": "АвтоМаркетБай",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000019"
+  },
+  {
+    "fullName": "Галговская Диана",
+    "company": "АвтоМаркетБай",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000020"
+  },
+  {
+    "fullName": "Виниченко Иван",
+    "company": "АВТОМЕХАНИКА ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000021"
+  },
+  {
+    "fullName": "Зорин Евгений",
+    "company": "АВТОМЕХАНИКА ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000022"
+  },
+  {
+    "fullName": "Городецкий Антон",
+    "company": "Автомир ДК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000023"
+  },
+  {
+    "fullName": "Городецкая Эльвира",
+    "company": "Автомир ДК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000024"
+  },
+  {
+    "fullName": "Крючков Александр",
+    "company": "Автомир ДК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000025"
+  },
+  {
+    "fullName": "Крючкова Светлана",
+    "company": "Автомир ДК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000026"
+  },
+  {
+    "fullName": "Северьянов Денис",
+    "company": "Автомотозапчасть",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000027"
+  },
+  {
+    "fullName": "Лупиков Константин",
+    "company": "Автомотозапчасть",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000028"
+  },
+  {
+    "fullName": "Суховеркова Инна",
+    "company": "Автосила",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000029"
+  },
+  {
+    "fullName": "Суховерков Владимир",
+    "company": "Автосила",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000030"
+  },
+  {
+    "fullName": "Серенко Илья",
+    "company": "Автосила",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000031"
+  },
+  {
+    "fullName": "Виткалов Дмитрий",
+    "company": "Автоспейс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000032"
+  },
+  {
+    "fullName": "Анискин Александр",
+    "company": "Автоспейс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000033"
+  },
+  {
+    "fullName": "Захарова Наталья",
+    "company": "Автотехимпорт",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000034"
+  },
+  {
+    "fullName": "Дадаев Дада",
+    "company": "Автохадом",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000035"
+  },
+  {
+    "fullName": "Цыганков Владимир",
+    "company": "Автохимия -Инвест ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000036"
+  },
+  {
+    "fullName": "Дешина Ольга",
+    "company": "Автохимия -Инвест ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000037"
+  },
+  {
+    "fullName": "Калачев Виктор",
+    "company": "Автохимия -Инвест ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000038"
+  },
+  {
+    "fullName": "Мансуров Дамир",
+    "company": "Агидель Авто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000039"
+  },
+  {
+    "fullName": "Пакунов Егор",
+    "company": "Агреман",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000040"
+  },
+  {
+    "fullName": "Пакунова Варвара",
+    "company": "Агреман",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000041"
+  },
+  {
+    "fullName": "Погребнов Дмитрий",
+    "company": "Агропромснаб",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000042"
+  },
+  {
+    "fullName": "Красова Ирина",
+    "company": "Агропромснаб",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000043"
+  },
+  {
+    "fullName": "Бодыль Алеся",
+    "company": "АДГСпецМаркет",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000044"
+  },
+  {
+    "fullName": "Галговский Дмитрий",
+    "company": "АДГСпецМаркет",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000045"
+  },
+  {
+    "fullName": "Мискевич Валерий",
+    "company": "ИП Антипьев",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000046"
+  },
+  {
+    "fullName": "Мискевич Алина",
+    "company": "ИП Антипьев",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000047"
+  },
+  {
+    "fullName": "Васильева Галина",
+    "company": "АО \"ВЮРТ СЕВЕРО-ЗАПАД\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000048"
+  },
+  {
+    "fullName": "Митягина Дарья",
+    "company": "АО \"ВЮРТ СЕВЕРО-ЗАПАД\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000049"
+  },
+  {
+    "fullName": "Лунегов Евгений",
+    "company": "Армада",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000050"
+  },
+  {
+    "fullName": "Кожевников Василий",
+    "company": "Армада",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000051"
+  },
+  {
+    "fullName": "Савинов Александр",
+    "company": "БелМаг",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000052"
+  },
+  {
+    "fullName": "Гун Игорь",
+    "company": "БелМаг",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000053"
+  },
+  {
+    "fullName": "Мальцев Сергей",
+    "company": "ВеркерАвто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000054"
+  },
+  {
+    "fullName": "Мальцева Екатерина",
+    "company": "ВеркерАвто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000055"
+  },
+  {
+    "fullName": "Извеков Максим",
+    "company": "ВМПАВТО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000056"
+  },
+  {
+    "fullName": "Самойлюк Владислав",
+    "company": "ВсеИнструменты.ру",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000057"
+  },
+  {
+    "fullName": "Чернозубцев Олег",
+    "company": "ГК ТСК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000058"
+  },
+  {
+    "fullName": "Булдин Илья",
+    "company": "ГК ТСК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000059"
+  },
+  {
+    "fullName": "Незнамов Антон",
+    "company": "ГК ТСК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000060"
+  },
+  {
+    "fullName": "Мороз Алексей",
+    "company": "Горностай",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000061"
+  },
+  {
+    "fullName": "Кузьминых Константин",
+    "company": "Движение-Автомасла",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000062"
+  },
+  {
+    "fullName": "Мурин Алексей",
+    "company": "Движение-Автомасла",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000063"
+  },
+  {
+    "fullName": "Беленок Мария",
+    "company": "Грейс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000064"
+  },
+  {
+    "fullName": "Гусакова Елена",
+    "company": "Грейс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000065"
+  },
+  {
+    "fullName": "Латыпов Арсен",
+    "company": "ДвижОК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000066"
+  },
+  {
+    "fullName": "Штемпель Андрей",
+    "company": "ДДВ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000067"
+  },
+  {
+    "fullName": "Мороз Ирина",
+    "company": "ЗАО АКРОНД",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000068"
+  },
+  {
+    "fullName": "Кораблёв Денис",
+    "company": "ЗАО АКРОНД",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000069"
+  },
+  {
+    "fullName": "Родинова Елизавета",
+    "company": "ЗАО АКРОНД",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000070"
+  },
+  {
+    "fullName": "Емельянова Анастасия",
+    "company": "ИЗ-КАРТЭКС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000071"
+  },
+  {
+    "fullName": "Логинов Сергей",
+    "company": "ИЗ-КАРТЭКС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000072"
+  },
+  {
+    "fullName": "Бешенов Василий",
+    "company": "ИП Бешенов В.Г.",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000073"
+  },
+  {
+    "fullName": "Емельянов Андрей",
+    "company": "ИЗ-КАРТЭКС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000074"
+  },
+  {
+    "fullName": "Прилипко Дмитрий",
+    "company": "Имик Лубрикантс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000075"
+  },
+  {
+    "fullName": "Махмудов Алексей",
+    "company": "Интернет Решения",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000076"
+  },
+  {
+    "fullName": "Куранов Андрей",
+    "company": "Интернет Решения",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000077"
+  },
+  {
+    "fullName": "Куринова Мария",
+    "company": "Интернет Решения FRESH",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000078"
+  },
+  {
+    "fullName": "Яковлева Анастасия",
+    "company": "Интернет Решения FRESH",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000079"
+  },
+  {
+    "fullName": "Андреева Ульяна",
+    "company": "ИП Карасев",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000080"
+  },
+  {
+    "fullName": "Андреев Олег",
+    "company": "ИП Карасев",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000081"
+  },
+  {
+    "fullName": "Красоцкий Владимир",
+    "company": "ИП Красоцкий",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000082"
+  },
+  {
+    "fullName": "Красоцкая Оксана",
+    "company": "ИП Красоцкий",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000083"
+  },
+  {
+    "fullName": "Лашев Александр",
+    "company": "ИП Порядин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000084"
+  },
+  {
+    "fullName": "Согомонян Максим",
+    "company": "Ип Порядин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000085"
+  },
+  {
+    "fullName": "Порядин Владимир",
+    "company": "Ип Порядин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000086"
+  },
+  {
+    "fullName": "Рудый Игорь",
+    "company": "ИП Рудый",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000087"
+  },
+  {
+    "fullName": "Рудая Татьяна",
+    "company": "ИП Рудый",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000088"
+  },
+  {
+    "fullName": "Шалыгин Евгений",
+    "company": "ИП Шалыгин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000089"
+  },
+  {
+    "fullName": "Шалыгина Мария",
+    "company": "ИП Шалыгин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000090"
+  },
+  {
+    "fullName": "Моделиков Дмитрий",
+    "company": "ИП Шалыгин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000091"
+  },
+  {
+    "fullName": "Моделикова Анастасия",
+    "company": "ИП Шалыгин",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000092"
+  },
+  {
+    "fullName": "Миронова Ольга",
+    "company": "КАМАЗ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000093"
+  },
+  {
+    "fullName": "Салахутдинова Татьяна",
+    "company": "КАМАЗ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000094"
+  },
+  {
+    "fullName": "Бондаренко Татьяна",
+    "company": "Капрон",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000095"
+  },
+  {
+    "fullName": "Анищенко Екатерина",
+    "company": "Капрон",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000096"
+  },
+  {
+    "fullName": "Яковлева Виктория",
+    "company": "Капрон",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000097"
+  },
+  {
+    "fullName": "Дмитрий Водзик",
+    "company": "Карьер-Сервис",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000098"
+  },
+  {
+    "fullName": "Тарасов Антон",
+    "company": "Карьер-Сервис",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000099"
+  },
+  {
+    "fullName": "Гаврилова Алина",
+    "company": "Карьер-Сервис",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000100"
+  },
+  {
+    "fullName": "Климович Анна",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000101"
+  },
+  {
+    "fullName": "Иванов Виктор",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000102"
+  },
+  {
+    "fullName": "Мокейчев Евгений",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000103"
+  },
+  {
+    "fullName": "Пирожкова Ксения",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000104"
+  },
+  {
+    "fullName": "Мокейчева Яна",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000105"
+  },
+  {
+    "fullName": "Пелевина Майя",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000106"
+  },
+  {
+    "fullName": "Николаева Татьяна",
+    "company": "Климович Ивент",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000107"
+  },
+  {
+    "fullName": "Дремин Станислав",
+    "company": "Команда АП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000108"
+  },
+  {
+    "fullName": "Балацко Вячеслав",
+    "company": "Команда АП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000109"
+  },
+  {
+    "fullName": "Чернобаев Анатолий",
+    "company": "Команда АП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000110"
+  },
+  {
+    "fullName": "Червяков Платон",
+    "company": "Команда АП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000111"
+  },
+  {
+    "fullName": "Пятачкова Ольга",
+    "company": "Команда АП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000112"
+  },
+  {
+    "fullName": "Гидт Владимир",
+    "company": "Контактная механика",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000113"
+  },
+  {
+    "fullName": "Клименкова Анастасия",
+    "company": "Контактная механика",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000114"
+  },
+  {
+    "fullName": "Кряжевских Екатерина",
+    "company": "Маслон",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000115"
+  },
+  {
+    "fullName": "Козлов Евгений",
+    "company": "КС ОЙЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000116"
+  },
+  {
+    "fullName": "Манчын Андрей",
+    "company": "КС ОЙЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000117"
+  },
+  {
+    "fullName": "Гриценко Екатерина",
+    "company": "КС ОЙЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000118"
+  },
+  {
+    "fullName": "Аверьянов Станислав",
+    "company": "КТЗ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000119"
+  },
+  {
+    "fullName": "Ефанов Кирилл",
+    "company": "КТЗ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000120"
+  },
+  {
+    "fullName": "Мосин Олег",
+    "company": "ЛГРУ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000121"
+  },
+  {
+    "fullName": "Головин Олег",
+    "company": "Лебединский ГОК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000122"
+  },
+  {
+    "fullName": "Крюков Максим",
+    "company": "Лебединский ГОК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000123"
+  },
+  {
+    "fullName": "Хопта Владислав",
+    "company": "Линкор-ТС",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000124"
+  },
+  {
+    "fullName": "Субботина Светлана",
+    "company": "ЛонМади",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000125"
+  },
+  {
+    "fullName": "Тимур Дунаев",
+    "company": "Лубри груп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000126"
+  },
+  {
+    "fullName": "Коваленко Александр",
+    "company": "Лубри груп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000127"
+  },
+  {
+    "fullName": "Ганкевич Ксения",
+    "company": "Хелби-Трейд",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000128"
+  },
+  {
+    "fullName": "Цвигун Сергей",
+    "company": "М-Партс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000129"
+  },
+  {
+    "fullName": "Гусейнов Камиль",
+    "company": "Магма",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000130"
+  },
+  {
+    "fullName": "Магомедов Джамал",
+    "company": "Магма",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000131"
+  },
+  {
+    "fullName": "Кряжевских Антон",
+    "company": "Маслон",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000132"
+  },
+  {
+    "fullName": "Герасимова Мария",
+    "company": "Неокемикал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000133"
+  },
+  {
+    "fullName": "Полянская Валерия",
+    "company": "Неокемикал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000134"
+  },
+  {
+    "fullName": "Новицкая Александра",
+    "company": "Неокемикал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000135"
+  },
+  {
+    "fullName": "Абышкаева Ананра",
+    "company": "ОйлПрофи",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000136"
+  },
+  {
+    "fullName": "Харитонов Антон",
+    "company": "ОйлПрофи",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000137"
+  },
+  {
+    "fullName": "Харитонова Мийа",
+    "company": "ОйлПрофи",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000138"
+  },
+  {
+    "fullName": "Иванков Иван",
+    "company": "ООО \"АВТОПИТЕР\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000139"
+  },
+  {
+    "fullName": "Родионова Екатерина",
+    "company": "ООО \"АГА-Т\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000140"
+  },
+  {
+    "fullName": "Шубин Иван",
+    "company": "ООО \"КОМПАНИЯ АВТО-КОМПОНЕНТ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000141"
+  },
+  {
+    "fullName": "Гуров Константин",
+    "company": "ООО \"КОМПАНИЯ АВТО-КОМПОНЕНТ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000142"
+  },
+  {
+    "fullName": "Демьяненко Андрей",
+    "company": "ООО \"Магик\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000143"
+  },
+  {
+    "fullName": "Цуканова Евгения",
+    "company": "ООО \"Масломир\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000144"
+  },
+  {
+    "fullName": "Кондратьева Екатерина",
+    "company": "ООО \"Масломир\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000145"
+  },
+  {
+    "fullName": "Иванов Виктор",
+    "company": "ООО \"РВБ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000146"
+  },
+  {
+    "fullName": "Гаврилюк Василий",
+    "company": "ООО \"РВБ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000147"
+  },
+  {
+    "fullName": "Солоничкин Александр",
+    "company": "ООО \"РВБ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000148"
+  },
+  {
+    "fullName": "Озеров Сергей",
+    "company": "ООО \"РВБ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000149"
+  },
+  {
+    "fullName": "Волохов Андрей",
+    "company": "ООО \"РИТЕЙЛ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000150"
+  },
+  {
+    "fullName": "Кузнецов Дмитрий",
+    "company": "ООО \"РИТЕЙЛ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000151"
+  },
+  {
+    "fullName": "Павленко Николай",
+    "company": "ООО \"Сибирская Топливная компания\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000152"
+  },
+  {
+    "fullName": "Елена Закусилова",
+    "company": "ООО \"Спектр-Ойл\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000153"
+  },
+  {
+    "fullName": "Потапов Владимир",
+    "company": "ООО \"Спектр-Ойл\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000154"
+  },
+  {
+    "fullName": "Потапова Анна",
+    "company": "ООО \"Спектр-Ойл\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000155"
+  },
+  {
+    "fullName": "Моря Роман",
+    "company": "ООО \"ССК\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000156"
+  },
+  {
+    "fullName": "Плясунов Евгений",
+    "company": "ООО \"Транзит-Ойл\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000157"
+  },
+  {
+    "fullName": "Слукина Юлия",
+    "company": "Хелби-Трейд",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000158"
+  },
+  {
+    "fullName": "Подвальный Максим",
+    "company": "ООО \"Форт\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000159"
+  },
+  {
+    "fullName": "Парфёнов Евгений",
+    "company": "ООО \"Форт\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000160"
+  },
+  {
+    "fullName": "Смирнов Алексей",
+    "company": "ООО \"Центральный Склад Сибири\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000161"
+  },
+  {
+    "fullName": "Клочков Алексей",
+    "company": "ООО \"Центральный Склад Сибири\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000162"
+  },
+  {
+    "fullName": "Дубодел Евгений",
+    "company": "ООО «ЛАЛ-АВТО»",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000163"
+  },
+  {
+    "fullName": "Бжилянский Константин",
+    "company": "ООО «ЛАЛ-АВТО»",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000164"
+  },
+  {
+    "fullName": "Дробов Максим",
+    "company": "ООО\"НАБИ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000165"
+  },
+  {
+    "fullName": "Грекова Таисья",
+    "company": "ООО\"НАБИ\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000166"
+  },
+  {
+    "fullName": "Халитов Рустам",
+    "company": "Плант Инвест",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000167"
+  },
+  {
+    "fullName": "Самсонов Александр",
+    "company": "Плант Инвест",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000168"
+  },
+  {
+    "fullName": "Петрикеев Антон",
+    "company": "Пономарев А.П",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000169"
+  },
+  {
+    "fullName": "Пономарев Александр",
+    "company": "Пономарев А.П",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000170"
+  },
+  {
+    "fullName": "Чумаков Дмитрий",
+    "company": "Практическая Механика",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000171"
+  },
+  {
+    "fullName": "Иванников Олег",
+    "company": "Промпласт",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000172"
+  },
+  {
+    "fullName": "Драганов Василий",
+    "company": "Промэкспорт-СМ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000173"
+  },
+  {
+    "fullName": "Маслова Анна",
+    "company": "Промэкспорт-СМ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000174"
+  },
+  {
+    "fullName": "Леонидов Лев",
+    "company": "Профит-Лига",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000175"
+  },
+  {
+    "fullName": "Леонидова Анна",
+    "company": "Профит-Лига",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000176"
+  },
+  {
+    "fullName": "Лонщаков Алексей",
+    "company": "Ресурс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000177"
+  },
+  {
+    "fullName": "Аверьянов Сергей",
+    "company": "Ривьера ТТК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000178"
+  },
+  {
+    "fullName": "Аверьянова Эльза",
+    "company": "Ривьера ТТК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000179"
+  },
+  {
+    "fullName": "Козлов Виталий",
+    "company": "РМС Черноземье",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000180"
+  },
+  {
+    "fullName": "Третьякова Светлана",
+    "company": "СДС Уголь",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000181"
+  },
+  {
+    "fullName": "Береснева Валентина",
+    "company": "СДС Уголь",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000182"
+  },
+  {
+    "fullName": "Пахомов Александр",
+    "company": "Сириус Авто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000183"
+  },
+  {
+    "fullName": "Касмасов Эмиль",
+    "company": "СКЛ ГРУПП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000184"
+  },
+  {
+    "fullName": "Остапчук Василий",
+    "company": "СтройПромКапитал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000185"
+  },
+  {
+    "fullName": "Швец Светлана",
+    "company": "СтройПромКапитал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000186"
+  },
+  {
+    "fullName": "Остапчук Антон",
+    "company": "СтройПромКапитал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000187"
+  },
+  {
+    "fullName": "Жданов Александр",
+    "company": "СтройПромКапитал",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000188"
+  },
+  {
+    "fullName": "Сарников Павел",
+    "company": "Стройсервис",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000189"
+  },
+  {
+    "fullName": "Рыбаков Александр",
+    "company": "ТД \"КУДО\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000190"
+  },
+  {
+    "fullName": "Хетагурова Заира",
+    "company": "Стройторговля ООО (ВИМОС)",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000191"
+  },
+  {
+    "fullName": "Дранько Николай",
+    "company": "Стройторговля ООО (ВИМОС)",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000192"
+  },
+  {
+    "fullName": "Петков Пламен",
+    "company": "ТД Восход",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000193"
+  },
+  {
+    "fullName": "Добридень Евгений",
+    "company": "ТД \"КУДО\"",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000194"
+  },
+  {
+    "fullName": "Костромитин Кирилл",
+    "company": "ТД Веста",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000195"
+  },
+  {
+    "fullName": "Матто Алексей",
+    "company": "ТД Веста",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000196"
+  },
+  {
+    "fullName": "Урих Виктор",
+    "company": "ТД Русойл",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000197"
+  },
+  {
+    "fullName": "Борисов Борис",
+    "company": "ТД Сатурн ООО",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000198"
+  },
+  {
+    "fullName": "Тимшин Даниил",
+    "company": "Техноойл",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000199"
+  },
+  {
+    "fullName": "Ильин Сергей",
+    "company": "Техноойл",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000200"
+  },
+  {
+    "fullName": "Падучин Игорь",
+    "company": "ТРЕК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000201"
+  },
+  {
+    "fullName": "Падучина Елена",
+    "company": "ТРЕК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000202"
+  },
+  {
+    "fullName": "Падучина Анна",
+    "company": "ТРЕК",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000203"
+  },
+  {
+    "fullName": "Капцов Сергей",
+    "company": "Форвард Моторс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000204"
+  },
+  {
+    "fullName": "Жуковец Александр",
+    "company": "Форвард Моторс",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000205"
+  },
+  {
+    "fullName": "Елагин Александр",
+    "company": "ХПП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000206"
+  },
+  {
+    "fullName": "Докторов Александр",
+    "company": "ХПП",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000207"
+  },
+  {
+    "fullName": "Ходос Михаил",
+    "company": "Ходос",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000208"
+  },
+  {
+    "fullName": "Егорова Ольга",
+    "company": "Ходос",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000209"
+  },
+  {
+    "fullName": "Белашов Илья",
+    "company": "Ходос",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000210"
+  },
+  {
+    "fullName": "Марков Дмитрий",
+    "company": "Нева",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000211"
+  },
+  {
+    "fullName": "Васильев Вадим",
+    "company": "Нева",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000212"
+  },
+  {
+    "fullName": "Сальников Владислав",
+    "company": "Практическая Механика",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000213"
+  },
+  {
+    "fullName": "Баранок Алексей",
+    "company": "Шате-М",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000214"
+  },
+  {
+    "fullName": "Гвоздик Евгения",
+    "company": "Шате-М",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000215"
+  },
+  {
+    "fullName": "Кабакин Дмитрий",
+    "company": "Промэкспорт-СМ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000216"
+  },
+  {
+    "fullName": "Куликов Артем",
+    "company": "Эконива Техника",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000217"
+  },
+  {
+    "fullName": "Панова Ксения",
+    "company": "Эконива Техника",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000218"
+  },
+  {
+    "fullName": "Квочкин Вячеслав",
+    "company": "Элит ОЙЛ",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000219"
+  },
+  {
+    "fullName": "Усвяцов Сергей",
+    "company": "ЭнергоРесурсГрупп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000220"
+  },
+  {
+    "fullName": "Маркова Елена",
+    "company": "ЭнергоРесурсГрупп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000221"
+  },
+  {
+    "fullName": "Бовтунова Инна",
+    "company": "Энико",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000222"
+  },
+  {
+    "fullName": "Гаврилюк Олег",
+    "company": "Энико",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000223"
+  },
+  {
+    "fullName": "Даулеева Виктория",
+    "company": "ЭНРОН Групп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000224"
+  },
+  {
+    "fullName": "Даулеев Андрей",
+    "company": "ЭНРОН Групп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000225"
+  },
+  {
+    "fullName": "Котлова Наталья",
+    "company": "ЭНРОН Групп",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000226"
+  },
+  {
+    "fullName": "Науменко Артем",
+    "company": "Югтрендавто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000227"
+  },
+  {
+    "fullName": "Науменко Анна",
+    "company": "югтрендавто",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000228"
+  },
+  {
+    "fullName": "Рассохина Анастасия",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000229"
+  },
+  {
+    "fullName": "Мишкин Илья",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000230"
+  },
+  {
+    "fullName": "Bayartsog Jandag",
+    "company": "Ace of Spade",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000231"
+  },
+  {
+    "fullName": "Wilson Queiroz Merlo",
+    "company": "Auto Line",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000232"
+  },
+  {
+    "fullName": "Казанкапов Айдос",
+    "company": "ETrade",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000233"
+  },
+  {
+    "fullName": "Казанкапова Камилла",
+    "company": "ETrade",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000234"
+  },
+  {
+    "fullName": "Жетмеков Нуржан",
+    "company": "Kip automatic",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000235"
+  },
+  {
+    "fullName": "Куатов Сагындык",
+    "company": "Kip automatic",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000236"
+  },
+  {
+    "fullName": "Пинья Роберто",
+    "company": "PINA MORENO JOSE FELICIANO",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000237"
+  },
+  {
+    "fullName": "Давыдов Александр",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000238"
+  },
+  {
+    "fullName": "Давыдов Евгений",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000239"
+  },
+  {
+    "fullName": "Давыдов Андрей",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000240"
+  },
+  {
+    "fullName": "Рябцева Анна",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000241"
+  },
+  {
+    "fullName": "Давыдова Екатерина",
+    "company": "VBP",
+    "phone": null,
+    "note": null,
+    "badgeCode": "G-000242"
+  }
+]

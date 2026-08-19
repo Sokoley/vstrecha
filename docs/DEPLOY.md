@@ -24,11 +24,22 @@ git pull
 ## 3. Файл `.env` на сервере
 
 ```env
-DATABASE_URL="mysql://db_wp_user:ВАШ_ПАРОЛЬ@127.0.0.1:3306/vstrecha"
+DATABASE_URL="mysql://db_wp_user:ВАШ_ПАРОЛЬ@127.0.0.1:3310/vstrecha"
 NEXT_PUBLIC_APP_URL="https://vstrecha.smazka.ru"
 ```
 
-`127.0.0.1` работает, потому что контейнер идёт с `network_mode: host` (видит MariaDB хоста).
+На этом сервере MariaDB в Docker слушает **3310** (как у brand). `127.0.0.1` работает, потому что контейнер приложения идёт с `network_mode: host`.
+
+### Импорт гостей из JSON
+
+```bash
+cd /var/www/www-root/data/www/vstrecha.smazka.ru
+git pull
+docker compose up -d --build
+docker exec vstrecha-app node prisma/import-guests.js
+```
+
+Скрипт удаляет всех текущих гостей и их отметки, затем загружает список из `prisma/guests-import.json`. Этапы не трогает.
 
 ## 4. Запуск через Docker / ispmanager
 

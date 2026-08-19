@@ -12,6 +12,7 @@
     "lint": "next lint",
     "db:push": "prisma db push",
     "db:seed": "node prisma/seed.js",
+    "db:import-guests": "node prisma/import-guests.js",
     "db:up": "docker compose -f docker-compose.dev.yml up -d",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up -d --build",
