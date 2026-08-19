@@ -24,7 +24,7 @@ export default async function BadgesPage() {
         <div>
           <h1 className="page-title">Печать QR-бейджей</h1>
           <p className="mt-1 text-sm text-ink-900/65">
-            На бейдже: имя, компания и QR с кодом гостя. Используйте «Печать» браузера.
+            На бейдже: имя, компания и QR с кодом гостя. Можно скачать PDF или распечатать из браузера.
           </p>
         </div>
         <BadgePrintClient count={badges.length} />
