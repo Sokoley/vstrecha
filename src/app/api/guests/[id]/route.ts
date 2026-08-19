@@ -42,7 +42,7 @@ export async function PATCH(request: Request, { params }: Params) {
   }
 
   if (parsed.data.stageIds !== undefined) {
-    const uniqueStageIds = [...new Set(parsed.data.stageIds)];
+    const uniqueStageIds = Array.from(new Set(parsed.data.stageIds));
     if (uniqueStageIds.length) {
       const stages = await prisma.stage.findMany({
         where: { id: { in: uniqueStageIds } },
@@ -70,8 +70,8 @@ export async function PATCH(request: Request, { params }: Params) {
       if (parsed.data.stageIds !== undefined) {
         const nextIds = new Set(parsed.data.stageIds);
         const currentIds = new Set(existing.checkIns.map((c) => c.stageId));
-        const toRemove = [...currentIds].filter((id) => !nextIds.has(id));
-        const toAdd = [...nextIds].filter((id) => !currentIds.has(id));
+        const toRemove = Array.from(currentIds).filter((id) => !nextIds.has(id));
+        const toAdd = Array.from(nextIds).filter((id) => !currentIds.has(id));
 
         if (toRemove.length) {
           await tx.checkIn.deleteMany({

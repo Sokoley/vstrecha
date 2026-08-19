@@ -51,25 +51,146 @@ body {
 }
 
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
   body {
     background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
+
   header,
   .print\:hidden,
   button {
     display: none !important;
   }
+
   main {
     max-width: none !important;
     padding: 0 !important;
+    margin: 0 !important;
   }
-  .badge-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 12px !important;
+
+  .badge-sheets {
+    gap: 0 !important;
   }
-  .badge-card {
-    break-inside: avoid;
+
+  .badge-sheet {
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+    break-after: page;
     box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+  }
+
+  .badge-sheet:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
 }
+
+.badge-sheet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 210mm;
+  aspect-ratio: 210 / 297;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid #d5d0bb;
+  background: white;
+  box-shadow: 0 8px 24px rgba(28, 26, 22, 0.06);
+}
+
+.badge-sheet__half {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1 1 50%;
+  min-height: 0;
+  border-bottom: 1px solid #d9d4c6;
+}
+
+.badge-sheet__half:last-child {
+  border-bottom: none;
+}
+
+.badge-sheet__half--mirror .badge-face {
+  transform: rotate(180deg);
+}
+
+.badge-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+  height: 100%;
+  padding: 0.45rem 0.35rem 0.5rem;
+  border-right: 1px solid #d9d4c6;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.badge-face:last-child {
+  border-right: none;
+}
+
+.badge-face--empty {
+  visibility: hidden;
+}
+
+.badge-face__logo {
+  width: 92%;
+  max-height: 22%;
+  object-fit: contain;
+}
+
+.badge-face__name {
+  margin: 0;
+  width: 100%;
+  font-size: clamp(0.55rem, 1.5vw, 0.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #1c1a16;
+}
+
+.badge-face__qr {
+  width: min(72%, 7.5rem);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.badge-face__code {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.65rem;
+  color: #666055;
+}
+
+.badge-face__company {
+  margin-top: auto;
+  width: 100%;
+  border-radius: 0.25rem;
+  background: #e8e6df;
+  padding: 0.28rem 0.2rem;
+  font-size: 0.58rem;
+  line-height: 1.2;
+  color: #3a372f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-face__company--empty {
+  visibility: hidden;
+  min-height: 1.4rem;
+}
+
