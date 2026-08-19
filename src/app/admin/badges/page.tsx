@@ -10,7 +10,24 @@ type Badge = {
   company: string | null;
   badgeCode: string;
   qrDataUrl: string;
+  nameLine1: string;
+  nameLine2: string;
 };
+
+function titleWord(word: string) {
+  if (!word) return "";
+  return word.charAt(0).toLocaleUpperCase("ru-RU") + word.slice(1).toLocaleLowerCase("ru-RU");
+}
+
+function splitName(fullName: string) {
+  const parts = fullName.trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return { nameLine1: "", nameLine2: "" };
+  if (parts.length === 1) return { nameLine1: titleWord(parts[0]), nameLine2: "" };
+  return {
+    nameLine1: titleWord(parts[0]),
+    nameLine2: parts.slice(1).map(titleWord).join(" "),
+  };
+}
 
 function chunk<T>(items: T[], size: number): T[][] {
   const pages: T[][] = [];
@@ -25,11 +42,16 @@ function BadgeFace({ badge }: { badge: Badge }) {
     <article className="badge-face">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/badge-header.jpg" alt="" className="badge-face__logo" />
-      <h2 className="badge-face__name">{badge.fullName}</h2>
+      <div className="badge-face__name">
+        <span>{badge.nameLine1}</span>
+        {badge.nameLine2 ? <span>{badge.nameLine2}</span> : null}
+      </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={badge.qrDataUrl} alt={`QR ${badge.badgeCode}`} className="badge-face__qr" />
       <p className="badge-face__code">{badge.badgeCode}</p>
-      {badge.company ? <p className="badge-face__company">{badge.company}</p> : <span className="badge-face__company badge-face__company--empty" />}
+      <p className={`badge-face__company ${badge.company ? "" : "badge-face__company--empty"}`}>
+        {badge.company || "\u00a0"}
+      </p>
     </article>
   );
 }
@@ -37,13 +59,17 @@ function BadgeFace({ badge }: { badge: Badge }) {
 export default async function BadgesPage() {
   const guests = await prisma.guest.findMany({ orderBy: { fullName: "asc" } });
   const badges = await Promise.all(
-    guests.map(async (guest) => ({
-      id: guest.id,
-      fullName: guest.fullName,
-      company: guest.company,
-      badgeCode: guest.badgeCode,
-      qrDataUrl: await generateQrDataUrl(guest.badgeCode, 220),
-    }))
+    guests.map(async (guest) => {
+      const name = splitName(guest.fullName);
+      return {
+        id: guest.id,
+        fullName: guest.fullName,
+        company: guest.company,
+        badgeCode: guest.badgeCode,
+        qrDataUrl: await generateQrDataUrl(guest.badgeCode, 280),
+        ...name,
+      };
+    })
   );
   const sheets = chunk(badges, 4);
 
@@ -53,8 +79,8 @@ export default async function BadgesPage() {
         <div>
           <h1 className="page-title">Печать QR-бейджей</h1>
           <p className="mt-1 text-sm text-ink-900/65">
-            A4, по 4 гостя на лист: сверху обычные бейджи, снизу те же — зеркально. На бейдже:
-            логотип, ФИО, QR, код и компания.
+            A4 альбомная, бейдж 60×90 mm, 4 гостя на лист с зеркалом. Логотип 17×17,4 mm, QR 28×28
+            mm.
           </p>
         </div>
         <BadgePrintClient count={badges.length} />

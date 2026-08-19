@@ -50,9 +50,33 @@ body {
   }
 }
 
+@font-face {
+  font-family: "Bebas Neue Cyrillic";
+  src: url("/fonts/BebasNeueCyrillic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @media print {
   @page {
-    size: A4 portrait;
+    size: A4 landscape;
     margin: 0;
   }
 
@@ -80,8 +104,8 @@ body {
   }
 
   .badge-sheet {
-    width: 210mm;
-    height: 297mm;
+    width: 297mm;
+    height: 210mm;
     page-break-after: always;
     break-after: page;
     box-shadow: none !important;
@@ -98,9 +122,11 @@ body {
 .badge-sheet {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 210mm;
-  aspect-ratio: 210 / 297;
+  max-width: 297mm;
+  aspect-ratio: 297 / 210;
   margin-inline: auto;
   overflow: hidden;
   border: 1px solid #d5d0bb;
@@ -110,14 +136,10 @@ body {
 
 .badge-sheet__half {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex: 1 1 50%;
-  min-height: 0;
-  border-bottom: 1px solid #d9d4c6;
-}
-
-.badge-sheet__half:last-child {
-  border-bottom: none;
+  grid-template-columns: repeat(4, 60mm);
+  width: 240mm;
+  height: 90mm;
+  flex: 0 0 90mm;
 }
 
 .badge-sheet__half--mirror .badge-face {
@@ -125,21 +147,16 @@ body {
 }
 
 .badge-face {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0.35rem;
-  min-width: 0;
-  height: 100%;
-  padding: 0.45rem 0.35rem 0.5rem;
-  border-right: 1px solid #d9d4c6;
-  text-align: center;
+  width: 60mm;
+  height: 90mm;
+  padding: 0;
   box-sizing: border-box;
-}
-
-.badge-face:last-child {
-  border-right: none;
+  text-align: center;
+  overflow: hidden;
 }
 
 .badge-face--empty {
@@ -147,50 +164,82 @@ body {
 }
 
 .badge-face__logo {
-  width: 92%;
-  max-height: 22%;
+  position: absolute;
+  top: 3.1mm;
+  left: 50%;
+  width: 17mm;
+  height: 17.4mm;
+  transform: translateX(-50%);
   object-fit: contain;
 }
 
 .badge-face__name {
-  margin: 0;
+  position: absolute;
+  top: 21mm;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  font-family: "Bebas Neue Cyrillic", Impact, sans-serif;
+  font-size: 27pt;
+  font-weight: 400;
+  line-height: 0.95;
+  color: #000;
+}
+
+.badge-face__name span {
+  display: block;
   width: 100%;
-  font-size: clamp(0.55rem, 1.5vw, 0.8rem);
-  font-weight: 700;
-  line-height: 1.15;
-  text-transform: uppercase;
-  color: #1c1a16;
 }
 
 .badge-face__qr {
-  width: min(72%, 7.5rem);
-  aspect-ratio: 1;
+  position: absolute;
+  top: 40.6mm;
+  left: 50%;
+  width: 28mm;
+  height: 28mm;
+  transform: translateX(-50%);
   object-fit: contain;
 }
 
 .badge-face__code {
+  position: absolute;
+  top: 69.1mm;
+  right: calc((60mm - 28mm) / 2);
   margin: 0;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.65rem;
-  color: #666055;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 6pt;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  text-align: right;
 }
 
 .badge-face__company {
-  margin-top: auto;
-  width: 100%;
-  border-radius: 0.25rem;
-  background: #e8e6df;
-  padding: 0.28rem 0.2rem;
-  font-size: 0.58rem;
-  line-height: 1.2;
-  color: #3a372f;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60mm;
+  height: 16mm;
+  margin: 0;
+  padding: 0 2mm;
+  box-sizing: border-box;
+  background: #d8d8d8;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #000;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .badge-face__company--empty {
-  visibility: hidden;
-  min-height: 1.4rem;
+  color: transparent;
 }
+
 
