@@ -36,6 +36,7 @@ export function ScannerApp() {
   const [success, setSuccess] = useState("");
   const [busy, setBusy] = useState(false);
   const [stagesLoading, setStagesLoading] = useState(true);
+  const [stagesExpanded, setStagesExpanded] = useState(true);
   const [cameraOn, setCameraOn] = useState(false);
   const scannerRef = useRef<HTMLDivElement>(null);
   const html5QrRef = useRef<{ stop: () => Promise<void>; clear: () => void } | null>(null);
@@ -44,6 +45,7 @@ export function ScannerApp() {
   const selectedStage = stages.find((s) => s.id === selectedStageId) || null;
   const guestStage = data?.stages.find((s) => s.id === selectedStageId) || null;
   const canScan = Boolean(selectedStageId) && !data;
+  const showStageList = stagesExpanded || !selectedStage;
 
   useEffect(() => {
     let cancelled = false;
@@ -139,6 +141,7 @@ export function ScannerApp() {
 
   function selectStage(stageId: string) {
     setSelectedStageId(stageId);
+    setStagesExpanded(false);
     setData(null);
     setSuccess("");
     setError("");
@@ -193,7 +196,7 @@ export function ScannerApp() {
             <p className="text-sm text-ink-900/50">Загрузка этапов…</p>
           ) : !stages.length ? (
             <p className="text-sm text-ink-900/60">Нет активных этапов. Добавьте их в админке.</p>
-          ) : (
+          ) : showStageList ? (
             <div className="space-y-2">
               {stages.map((stage) => (
                 <label
@@ -214,19 +217,28 @@ export function ScannerApp() {
                 </label>
               ))}
             </div>
-          )}
+          ) : selectedStage ? (
+            <div className="flex items-center justify-between gap-3 rounded-xl border border-brand-500 bg-brand-50/60 px-3 py-3">
+              <div>
+                <p className="text-xs text-ink-900/50">Текущий этап</p>
+                <p className="font-medium text-ink-950">{selectedStage.name}</p>
+              </div>
+              <button
+                type="button"
+                className="btn-secondary !py-1.5 shrink-0"
+                onClick={() => setStagesExpanded(true)}
+              >
+                Сменить
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
 
       {selectedStage ? (
         <div className="card space-y-3">
           <div className="flex items-center justify-between gap-2">
-            <div>
-              <p className="text-sm font-medium text-ink-900/70">2. Сканируйте гостя</p>
-              <p className="text-sm text-ink-900/50">
-                Этап: <span className="font-medium text-ink-900">{selectedStage.name}</span>
-              </p>
-            </div>
+            <p className="text-sm font-medium text-ink-900/70">2. Сканируйте гостя</p>
             {!data ? (
               <button type="button" className="btn-secondary !py-1.5" onClick={() => setCameraOn((v) => !v)}>
                 {cameraOn ? "Камера выкл" : "Камера вкл"}
