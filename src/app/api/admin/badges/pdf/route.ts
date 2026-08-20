@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import fs from "fs";
 import path from "path";
 import PDFDocument from "pdfkit";
 import QRCode from "qrcode";
@@ -41,8 +42,19 @@ const COMPANY_SIZE_SMALL = 10;
 const FONT_BEBAS = path.join(process.cwd(), "assets/fonts/BebasNeue-Bold.otf");
 const FONT_MONTSERRAT_BOLD = path.join(process.cwd(), "assets/fonts/Montserrat-Bold.ttf");
 const FONT_MONTSERRAT_MEDIUM = path.join(process.cwd(), "assets/fonts/Montserrat-Medium.ttf");
-const LOGO_PATH = path.join(process.cwd(), "assets/badge-header.jpg");
+/** RGB PNG: исходный bage.jpg в CMYK ломал цвета в PDFKit */
+const LOGO_PATH = path.join(process.cwd(), "assets/badge-header.png");
+const LOGO_NATIVE_W = 722;
+const LOGO_NATIVE_H = 631;
 const CODE_COLOR = "#a9a9a9";
+
+function logoDrawSize() {
+  const scale = Math.min(LOGO_W / LOGO_NATIVE_W, LOGO_H / LOGO_NATIVE_H);
+  return {
+    width: LOGO_NATIVE_W * scale,
+    height: LOGO_NATIVE_H * scale,
+  };
+}
 
 function titleWord(word: string) {
   if (!word) return "";
@@ -84,7 +96,8 @@ async function drawBadgeFace(
   badge: Badge,
   x: number,
   y: number,
-  upsideDown: boolean
+  upsideDown: boolean,
+  logoBuffer: Buffer
 ) {
   doc.save();
   if (upsideDown) {
@@ -94,9 +107,10 @@ async function drawBadgeFace(
     doc.translate(x, y);
   }
 
-  doc.image(LOGO_PATH, (BADGE_W - LOGO_W) / 2, LOGO_TOP, {
-    width: LOGO_W,
-    height: LOGO_H,
+  const logo = logoDrawSize();
+  doc.image(logoBuffer, (BADGE_W - logo.width) / 2, LOGO_TOP + (LOGO_H - logo.height) / 2, {
+    width: logo.width,
+    height: logo.height,
   });
 
   const { line1, line2 } = splitName(badge.fullName);
@@ -192,6 +206,7 @@ function buildPdf(badges: Badge[]): Promise<Buffer> {
         return;
       }
 
+      const logoBuffer = fs.readFileSync(LOGO_PATH);
       const pageW = doc.page.width;
       const pageH = doc.page.height;
       const originX = (pageW - PER_PAGE * BADGE_W) / 2;
@@ -206,8 +221,8 @@ function buildPdf(badges: Badge[]): Promise<Buffer> {
         for (let i = 0; i < pageBadges.length; i++) {
           const badge = pageBadges[i];
           const bx = originX + i * BADGE_W;
-          await drawBadgeFace(doc, badge, bx, originY, false);
-          await drawBadgeFace(doc, badge, bx, originY + BADGE_H, true);
+          await drawBadgeFace(doc, badge, bx, originY, false, logoBuffer);
+          await drawBadgeFace(doc, badge, bx, originY + BADGE_H, true, logoBuffer);
         }
       }
 

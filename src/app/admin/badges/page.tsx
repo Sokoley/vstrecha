@@ -41,7 +41,7 @@ function BadgeFace({ badge }: { badge: Badge }) {
   return (
     <article className="badge-face">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/badge-header.jpg" alt="" className="badge-face__logo" />
+      <img src="/badge-header.png" alt="" className="badge-face__logo" />
       <div className="badge-face__name">
         <span>{badge.nameLine1}</span>
         {badge.nameLine2 ? <span>{badge.nameLine2}</span> : null}

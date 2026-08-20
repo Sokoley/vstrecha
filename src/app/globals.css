@@ -171,6 +171,7 @@ body {
   height: 17.4mm;
   transform: translateX(-50%);
   object-fit: contain;
+  object-position: center;
 }
 
 .badge-face__name {
