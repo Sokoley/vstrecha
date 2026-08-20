@@ -105,6 +105,10 @@ export async function PATCH(request: Request, { params }: Params) {
 }
 
 export async function DELETE(_request: Request, { params }: Params) {
-  await prisma.guest.delete({ where: { id: params.id } });
-  return NextResponse.json({ ok: true });
+  try {
+    await prisma.guest.delete({ where: { id: params.id } });
+    return NextResponse.json({ ok: true });
+  } catch {
+    return NextResponse.json({ error: "Гость не найден" }, { status: 404 });
+  }
 }
